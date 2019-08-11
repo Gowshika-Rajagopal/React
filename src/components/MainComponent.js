@@ -4,6 +4,7 @@ import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
 import DishDetail from './DishdetailComponent';
 import Contact from './ContactComponent';
+import AboutComponent from "./AboutComponent";
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import { DISHES } from '../shared/dishes';
@@ -52,6 +53,7 @@ class Main extends Component {
               <Route path='/home' component={HomePage} />
               <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
+              <Route path="/aboutus" component={() => <AboutComponent leaders={this.state.leaders} />} />
               <Route exact path='/contactus' component={Contact} />
               <Redirect to="/home" />
         </Switch>
